@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleAppDI
+namespace ConsoleAppDI.src
 {
     public class Program()
     {
