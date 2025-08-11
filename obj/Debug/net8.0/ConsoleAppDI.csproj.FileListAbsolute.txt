@@ -15,3 +15,4 @@ C:\Users\Test\Documents\заданияПП\ConsoleAppDI\obj\Debug\net8.0\refint\
 C:\Users\Test\Documents\заданияПП\ConsoleAppDI\obj\Debug\net8.0\ConsoleAppDI.pdb
 C:\Users\Test\Documents\заданияПП\ConsoleAppDI\obj\Debug\net8.0\ConsoleAppDI.genruntimeconfig.cache
 C:\Users\Test\Documents\заданияПП\ConsoleAppDI\obj\Debug\net8.0\ref\ConsoleAppDI.dll
+C:\Users\Test\Documents\заданияПП\ConsoleAppDI\obj\Debug\net8.0\ConsoleAppDI.sourcelink.json
