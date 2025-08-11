@@ -29,7 +29,7 @@ namespace ConsoleAppDI.src
         {
             Console.WriteLine("[INFO] Please select a messenger implementation:");
             Console.WriteLine("[INFO] 1 - ConsoleMessenger");
-            //Console.WriteLine("[INFO] 2 - StubMessenger (no output)");
+            Console.WriteLine("[INFO] 2 - StubMessenger (no output)");
 
             while (true)
             {
@@ -39,7 +39,7 @@ namespace ConsoleAppDI.src
                 switch (input)
                 {
                     case "1": return new ConsoleMessenger();
-                    //case "2": return new StubMessenger();
+                    case "2": return new StubMessenger();
                     default:
                         Console.WriteLine("[ERROR] Invalid choice.");
                         break;
