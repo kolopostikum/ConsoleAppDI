@@ -16,13 +16,35 @@ namespace ConsoleAppDI.src
 
             string message = ReadUserMessage();
 
-            IMessenger messenger = new ConsoleMessenger();
+            IMessenger messenger = ChooseMessenger();
 
             var sender = new Sender(messenger);
 
             sender.Send(message);
 
             ShowCompletionMessage(message);
+        }
+
+        private static IMessenger ChooseMessenger()
+        {
+            Console.WriteLine("[INFO] Please select a messenger implementation:");
+            Console.WriteLine("[INFO] 1 - ConsoleMessenger");
+            //Console.WriteLine("[INFO] 2 - StubMessenger (no output)");
+
+            while (true)
+            {
+                Console.Write("[INFO] Enter your choice (number): ");
+                string input = Console.ReadLine();
+
+                switch (input)
+                {
+                    case "1": return new ConsoleMessenger();
+                    //case "2": return new StubMessenger();
+                    default:
+                        Console.WriteLine("[ERROR] Invalid choice.");
+                        break;
+                }
+            }
         }
 
         private static void ShowWelcomeMessage()
