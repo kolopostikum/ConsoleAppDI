@@ -12,17 +12,26 @@ namespace ConsoleAppDI.src
         /// </summary>
         public static void Main()
         {
-            ShowWelcomeMessage();
+            try
+            {
+                ShowWelcomeMessage();
 
-            string message = ReadUserMessage();
+                string message = ReadUserMessage();
 
-            IMessenger messenger = ChooseMessenger();
+                IMessenger messenger = ChooseMessenger();
 
-            var sender = new Sender(messenger);
+                var sender = new Sender(messenger);
 
-            sender.Send(message);
+                sender.Send(message);
 
-            ShowCompletionMessage(message);
+                ShowCompletionMessage(message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[ERROR] An unexpected error occurred: {ex.Message}");
+                Console.WriteLine("[INFO] Program terminated due to an error.");
+                Environment.Exit(1);
+            }
         }
 
         private static IMessenger ChooseMessenger()
